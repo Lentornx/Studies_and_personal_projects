@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+xsi:noNamespaceSchemaLocation="index.xsd"
+<Ancient_Egypt_Old_Kingdom> 
+    <structures>
+        <structure_type> 
+            <name>Mastabas</name>
+            <year_beginning BCE="true">3150</year_beginning>
+            <structure material="red sandstone" casing="tura limestone" base="100 m x 74 m" height="18 m" destroyed="partly">
+                <name>Mastaba al-Fir'aun</name>
+                <ruler_name>Shepseskaf</ruler_name>
+                <photo>photos/al-firaun_mastaba.jpg</photo>
+            </structure>
+            <structure material="dried mudbricks" casing="palace facade" base="56 m x 25 m" height="unknown" destroyed="yes">
+                <name>Mastaba of Horus Cobra</name>
+                <ruler_name>Djet</ruler_name>
+                <photo>photos/horus_cobra_mastaba.jpg</photo>
+            </structure>
+        </structure_type>
+        <structure_type>
+            <name>step pyramids</name>
+            <year_beginning BCE="true">2686</year_beginning>
+            <structureExtended  material="sandstone" casing="white limestone" base="109 m x 121 m" height="62.5 m" destroyed="partly">
+                <name>Pyramid of Djoser</name>
+                <ruler_name>Netjerikhet</ruler_name>
+                <photo>photos/pyramid_of_djoser.jpg</photo>
+                <additionalInformation>
+                    <step_count>6</step_count>
+                </additionalInformation>
+            </structureExtended>
+            <structureExtended material="sandstone" casing="limestone" base="115 m x 115 m" height="8 m" destroyed="yes">
+                <name>Buried Pyramid</name>
+                <ruler_name>Sekhemkhet</ruler_name>
+                <photo>photos/buried_pyramid.jpg</photo>     
+                <additionalInformation>           
+                    <step_count>2</step_count>
+                </additionalInformation>
+            </structureExtended>
+        </structure_type>
+        <structure_type>
+            <name>true pyramids</name>
+            <year_beginning BCE="true">2613</year_beginning>
+            <structureExtended material="red sandstone" casing="white limestone" base="220 m x 220 m" height="105 m" destroyed="partly">
+                <name>Red Pyramid</name>
+                <ruler_name>Sneferu</ruler_name>
+                <photo>photos/red_pyramid.jpg</photo>
+                <additionalInformation>
+                    <slope>	43°22'</slope>
+                </additionalInformation>
+            </structureExtended>
+            <structureExtended material="limestone" casing="tura limestone" base="230 m x 230 m" height="147 m" destroyed="partly">
+                <name>Great Pyramid of Giza</name>
+                <ruler_name>Khufu</ruler_name>
+                <photo>photos/pyramid_of_giza.jpg</photo>
+                <additionalInformation>
+                    <slope>51°50'</slope>
+                </additionalInformation>
+            </structureExtended>
+        </structure_type>
+    </structures>
+    <dynasties> 
+        <dynasty>
+            <id>3</id>
+            <ruler confirmed="true">
+                <name>Netjerikhet</name>
+                <rule_beginning  BCE="true" confirmed="false">2686</rule_beginning>
+                <rule_end BCE="true" confirmed="true">2648</rule_end>
+            </ruler>
+            <ruler confirmed="true">
+                <name>Sekhemkhet</name>
+                <rule_beginning BCE="true" confirmed="true">2648</rule_beginning>
+                <rule_end BCE="true" confirmed="false">2640</rule_end>
+            </ruler>
+        </dynasty>
+        <dynasty>
+            <id>4</id>
+            <ruler confirmed="true">
+                <name>Sneferu</name>
+                <rule_beginning BCE="true" confirmed="false">2610</rule_beginning>
+                <rule_end BCE="true" confirmed="false">2580</rule_end>
+            </ruler>
+            <ruler confirmed="true">
+                <name>Khufu</name>
+                <rule_beginning BCE="true" confirmed="false">2580</rule_beginning>
+                <rule_end BCE="true" confirmed="false">2566</rule_end>
+            </ruler>
+        </dynasty>
+    </dynasties>
+    <games>
+        <game developer="Clarus Victoria" sequel="false">
+            <name>Predynastic Egypt</name>
+            <price>8.99</price>
+            <release_date>2016-10-10</release_date>
+            <link>https://store.steampowered.com/app/461620/Predynastic_Egypt/</link>
+        </game>
+        <game developer="Clarus Victoria" sequel="true">
+            <name>Egypt: Old Kingdom</name>
+            <price>13.49</price>
+            <release_date>2018-05-24</release_date>
+            <link>https://store.steampowered.com/app/646500/Egypt_Old_Kingdom/</link>
+        </game>
+    </games>
+    <pantheon>
+        <god>
+            <name>Horus</name>
+            <patronage>order, rule, hunt</patronage>
+            <animal_form>falcon</animal_form>
+        </god>
+        <god>
+            <name>Seth</name>
+            <patronage>desert, warfare, disorder</patronage>
+            <animal_form>jackal</animal_form>
+        </god>
+    </pantheon>
+    <year_beginning BCE="true">2686</year_beginning>
+    <year_end BCE="true">2181</year_end>
+    <wiki_page>https://en.wikipedia.org/wiki/Old_Kingdom_of_Egypt</wiki_page>
+    <contact_info>kamilcwynar 512518339</contact_info>
+</Ancient_Egypt_Old_Kingdom>

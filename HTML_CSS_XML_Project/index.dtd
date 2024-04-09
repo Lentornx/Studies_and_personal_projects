@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!ELEMENT Ancient_Egypt_Old_Kingdom (structures,dynasties,games,pantheon,year_beginning,year_end,wiki_page,contact_info)>
+<!ELEMENT year_beginning (#PCDATA)>
+<!ELEMENT year_end (#PCDATA)>
+<!ELEMENT wiki_page (#PCDATA)>
+<!ELEMENT contact_info (#PCDATA)>
+
+<!ELEMENT structures (structure_type+)>
+<!ELEMENT structure_type (name,year_beginning,structure*,structureExtended*)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT structure (name,ruler_name,photo)>
+<!ELEMENT structureExtended (name,ruler_name,photo,additionalInformation)>
+<!ELEMENT additionalInformation ((slope|step_count))>
+<!ELEMENT ruler_name (#PCDATA)>
+<!ELEMENT photo (#PCDATA)>
+<!ELEMENT slope (#PCDATA)>
+<!ELEMENT step_count (#PCDATA)>
+
+<!ELEMENT dynasties (dynasty+)>
+<!ELEMENT dynasty (id,ruler+)>
+<!ELEMENT ruler (name,rule_beginning,rule_end)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT rule_beginning (#PCDATA)>
+<!ELEMENT rule_end (#PCDATA)>
+
+<!ELEMENT games (game+)>
+<!ELEMENT game (name,price,release_date,link)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT release_date (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+
+<!ELEMENT pantheon (god+)>
+<!ELEMENT god (name,patronage,animal_form)>
+<!ELEMENT patronage (#PCDATA)>
+<!ELEMENT animal_form (#PCDATA)>
+
+<!ATTLIST year_beginning BCE (false|true) "true">
+<!ATTLIST year_end BCE (false|true) "true">
+<!ATTLIST rule_beginning BCE (false|true) "true">
+<!ATTLIST rule_end BCE (false|true) "true">
+<!ATTLIST structureExtended material CDATA #REQUIRED>
+<!ATTLIST structureExtended casing CDATA #REQUIRED>
+<!ATTLIST structureExtended base CDATA #REQUIRED>
+<!ATTLIST structureExtended height CDATA #REQUIRED>
+<!ATTLIST structureExtended destroyed CDATA #REQUIRED>
+<!ATTLIST structure material CDATA #REQUIRED>
+<!ATTLIST structure casing CDATA #REQUIRED>
+<!ATTLIST structure base CDATA #REQUIRED>
+<!ATTLIST structure height CDATA #REQUIRED>
+<!ATTLIST structure destroyed CDATA #REQUIRED>
+<!ATTLIST game developer CDATA #REQUIRED>
+<!ATTLIST game sequel (false|true) "false"> 
+<!ATTLIST rule_beginning confirmed (false|true) "false">
+<!ATTLIST rule_end confirmed (false|true) "false">
+<!ATTLIST ruler confirmed (false|true) "false">

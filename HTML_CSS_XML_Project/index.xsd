@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="Ancient_Egypt_Old_Kingdom">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="structures"/>
+            <xs:element ref="dynasties"/>
+            <xs:element ref="games"/>
+            <xs:element ref="pantheon"/>
+            <xs:element ref="year_beginning"/>
+            <xs:element ref="year_end"/>
+            <xs:element ref="wiki_page"/>
+            <xs:element ref="contact_info"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="structures">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="structure_type" type="structure_typeType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:complexType name="structure_typeType">
+    <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="year_beginning"/>
+        <xs:group ref="structureGroup" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:group name="structureGroup">
+    <xs:choice>
+        <xs:element name="structure" type="structureType"/>
+        <xs:element name="structureExtended" type="structureTypeExtended"/>
+    </xs:choice>
+</xs:group>
+
+<xs:complexType name="structureTypeExtended">
+    <xs:complexContent>
+        <xs:extension base="structureType">
+            <xs:sequence>
+                <xs:element name="additionalInformation" type="structureTypeExtension" minOccurs="0"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="structureType">
+    <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element name="ruler_name" type="xs:string"/>
+        <xs:element ref="photo"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="structureAttributes"/>
+</xs:complexType>
+
+<xs:complexType name="structureTypeExtension">
+    <xs:choice>
+        <xs:element name="step_count" type="xs:string"/>
+        <xs:element name="slope" type="xs:string"/>
+    </xs:choice>
+</xs:complexType>
+
+<xs:eleme-nt name="dynasties">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="dynasty" type="dynastyType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:complexType name="dynastyType">
+    <xs:sequence>
+        <xs:element name="id" type="idType"/>
+        <xs:element name="ruler" type="rulerType" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rulerType">
+    <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element name="rule_beginning" type="yearTypeDoubleExtended"/>
+        <xs:element name="rule_end" type="yearTypeDoubleExtended"/>
+    </xs:sequence>
+    <xs:attribute ref="confirmed"/>
+</xs:complexType>
+
+<xs:element name="games">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="game" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="name"/>
+                        <xs:element name="price" type="xs:double"/>
+                        <xs:element name="release_date" type="xs:date"/>
+                        <xs:element ref="link"/>
+                    </xs:sequence> 
+                    <xs:attribute name="developer" type="xs:string"/>
+                    <xs:attribute name="sequel" type="xs:boolean"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="pantheon">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="god" type="godType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:complexType name="godType">
+    <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element name="patronage" type="xs:string"/>
+        <xs:element name="animal_form" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:attributeGroup name="structureAttributes">
+    <xs:attribute name="material" type="xs:string"/>
+    <xs:attribute name="casing" type="xs:string"/>
+    <xs:attribute name="base" type="xs:string"/>
+    <xs:attribute name="height" type="xs:string"/>
+    <xs:attribute name="destroyed" type="destroyedType"/>
+</xs:attributeGroup>
+
+<xs:simpleType name="destroyedType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="yes"/>
+        <xs:enumeration value="partly"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="yearTypeDoubleExtended">
+    <xs:simpleContent>
+		<xs:extension base="yearTypeExtended">
+			<xs:attribute ref="confirmed"/> 
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="yearTypeExtended">
+    <xs:simpleContent>
+		<xs:extension base="yearType">
+			<xs:attribute ref="BCE"/> 
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="adressType">
+	<xs:simpleContent>
+		<xs:extension base="xs:string">
+			<xs:attribute name="source" type="xs:anyURI"/>
+		</xs:extension>
+	</xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="yearType">
+    <xs:restriction base="xs:gYear">
+        <xs:maxInclusive value="4000"/>
+        <xs:minInclusive value="2000"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="idType">
+    <xs:restriction base="xs:integer">
+        <xs:pattern value="[0-9]"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="shortStringType">
+    <xs:restriction base="xs:string">
+        <xs:minLength value="2"/>
+        <xs:maxLength value="30"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:element name="contact_info">
+  <xs:simpleType>
+    <xs:union memberTypes="shortStringType mobile_numberType" />
+  </xs:simpleType>
+</xs:element>
+
+<xs:simpleType name="mobile_numberType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9]{9}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:attribute name="BCE" type="xs:boolean"/>
+<xs:attribute name="confirmed" type="xs:boolean"/>
+<xs:element name="name" type="shortStringType"/>
+<xs:element name="photo" type="adressType"/>
+<xs:element name="link" type="adressType"/>
+<xs:element name="year_beginning" type="yearTypeExtended"/>
+<xs:element name="year_end" type="yearTypeExtended"/>
+<xs:element name="wiki_page" type="adressType"/>
+
+</xs:schema>
