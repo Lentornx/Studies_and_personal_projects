@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS Pozycje_Dostawy, Pozycje_sprzedazy, Pozycje_zamowien, Dostawy, Sprzedaze, Zamowienia, Hurtownie, Autorzy_ksiazek, Autorzy, Ksiazki, Wydawnictwa ;
