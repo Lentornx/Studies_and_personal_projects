@@ -1,0 +1,4 @@
+#pragma once
+#define BUFFERSIZE 64
+#define NON_CITY_INTERSECTION_NAME_SIZE 3
+#define BIG_NUMBER 99999999
