@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+    <head>
+        <title> Ancient Egypt - Old Kingdom - Quiz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="shortcut icon" href="favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body onload = "onLoad()">
+        <header class = "center" id = "header">
+            <h1 id = "title"> Ancient Egypt <br> Old Kingdom </h1>
+            <h3> 101 of pyramid building (among other things)</h3>
+        </header>
+        <nav id = "nav">
+            <a href = "gallery_1.html"><strong>Back to gallery</strong></a><br>
+        </nav>
+        <div id = "darkMode"></div>
+        <div id = "content">
+            <h2> Register </h2>
+            <div>
+                <form method = "post" action = "register.php" name = "registerForm" >
+                    <label for = "login"> login: </label><br>
+                    <input type = "text" name = "lpgin" value = "login" placeholder = "name.."><br>
+                    <label for = "email"> email: </label><br>
+                    <input type = "text" name = "email" value = "email" placeholder = "email.."><br>
+                    <label for = "password"> password: </label><br>
+                    <input type = "password"  value = "password" name = "password"><br>
+                    <label for = "password"> repeat password: </label><br>
+                    <input type = "password"  value = "password_repeat" name = "password_repeat"><br>
+                    <input type = "submit" value="Submit">
+                    <input type = "reset">
+                </form>
+            </div>
+        </div>
+        <footer class = "center" id = "footer">
+            Kamil Cwynar grupa 1 
+        </footer>
+    </body>
+
+</html>

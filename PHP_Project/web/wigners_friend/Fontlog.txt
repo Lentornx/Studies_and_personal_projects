@@ -1,0 +1,39 @@
+Wigners Friend
+---------------------
+
+Wigners Friend was constructed very quickly and so probably contains some errors.  If you find something which doesn't work properly then let me know and I may fix it.  If you don't let me know I probably won't fix it.
+
+This font was built to use in a graphic design project I was involved in and it proved useful in that role.
+
+
+This font was made in Sheffield, South Yorkshire!
+----------------------------------------------------------------------
+
+
+ChangeLog
+---------------
+(This should list both major and minor changes, most recent first.)
+
+
+7th January 2021   -  Started making the font.  I already knew how I wanted it to look so it was not difficult.
+
+16th January 2021 -  Finished doing the outlines.
+
+17th January 2021 - Finished the spacing.  With Font Creator this is largely automatic and needs little adjustment.
+
+18th January 2021 -  Finished the Open Type features.  With Font Creator this is largely automatic and needs little adjustment.
+
+24th January 2021 -  The font was used in the graphic design project for which it was designed.
+
+
+
+Acknowledgements
+---------------------------
+(Here is where contributors can be acknowledged. If you make modifications be 
+sure to add your name (N), email (E), web-address (W) and description (D). 
+This list is sorted by last name in alphabetical order.)
+
+N: Paul James Miller
+E: kelvinch@virginmedia.com
+W: 
+D: Original Designer and main contributor.
