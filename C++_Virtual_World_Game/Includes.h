@@ -1,0 +1,12 @@
+#pragma once
+#include "Wolf.h" 
+#include "Sheep.h"
+#include "Fox.h"
+#include "Turtle.h"
+#include "Antelope.h"
+#include "Grass.h"
+#include "Guarana.h"
+#include "Dandelion.h"
+#include "Wolfberry.h"
+#include "Hogweed.h"
+#include "Human.h"
